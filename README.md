@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Interns Journey
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+
+# Instructions
+
+##### 1. Clone the project from GitHub: Interns can clone the project from the current repository. This will download the entire project to their local machine.
+
+`git clone https://github.com/petrit-incodeks/interns-journey`
+
+`cd interns-journey`
+
+##### 2. Get changes from all branches ( in this case they will have staging, production and other branches they need in future ).
+
+`git pull`
+
+##### 3. Install dependencies listed in your project's package.json file.
+
+`npm install`
+
+##### 4. Create a branch with their name: Instructor or Intern will create a branch with their name, following the format of "name_lastname". This branch will serve as their personal branch where they will make all of their changes.
+
+`git checkout -b name_lastname staging`
+
+##### 5. Create a branch for each task: For each task, Interns will create a new branch using the command "git checkout -b task01". The branch name should be descriptive of the task they are working on, e.g "task01", "task02", etc.
+
+`git checkout -b task01 name_lastname`
+
+##### 6. Work on the specified file for each task: Interns will find the specified file for each task at "src > components > solutions > Solution{id of task}". They will make their changes to this file, and these changes will appear in the solution section of the task they are working on.
+
+##### 7. Push changes to the created branch: After finishing the task, Interns will need to push their changes to the branch they created for the task. This will update the branch on GitHub with their changes.
+
+##### - Check files that you changed:
+`git status`
+##### - Add changed files to commit ( Be carefull not to add other files that don't need to be commited )
+`git add src/components/solutions/Solution1.js`
+##### - Push the changes to the task branch
+`git commit -m "your message (try to give few informations of changes you made)"`
+##### - Push the changes to the task branch
+`git push origin task01`
+##### Note: It's a good practice to make regular commits during the task and to ensure that the branch is up to date before opening a Pull Request.
+
+##### 8. Open a Pull Request: Interns will open a Pull Request to request the Instructor of the project to review their code. The Pull Request will show the changes they made and allow the Instructor to approve or request changes.
+
+##### 9. Merge the code: If the Instructor approves the changes, the code will be merged into the Interns' personal branch, "name_lastname". This will update their branch on GitHub with the completed task.
+
+
+
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm install` : This script installs all the dependencies listed in your project's package.json file.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `npm start` : This script starts a development server and opens the project in the browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `npm test` : This script runs your project's tests and outputs the results.
 
-### `npm test`
+### `npm run build` : This script creates a production-ready build of your React project. The output is stored in the build directory.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `npm run eject` : This script is used in Create React App projects to "eject" the project from the default setup and give you full control over the project's configuration.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
