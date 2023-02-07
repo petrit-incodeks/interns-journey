@@ -1,12 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import Solution1 from "../../components/solutions/Solution1";
-import Solution2 from "../../components/solutions/Solution2";
-import Solution3 from "../../components/solutions/Solution3";
-import Solution4 from "../../components/solutions/Solution4";
-import Solution5 from "../../components/solutions/Solution5";
-import Solution6 from "../../components/solutions/Solution6";
+import Solution1 from "../../components/solutions/task01/Solution1";
+import Solution2 from "../../components/solutions/task02/Solution2";
+import Solution3 from "../../components/solutions/task03/Solution3";
+import Solution4 from "../../components/solutions/task04/Solution4";
+import Solution5 from "../../components/solutions/task05/Solution5";
+import Solution6 from "../../components/solutions/task06/Solution6";
 import "./assignment.css";
+import "../../components/solutions/style/solutions.css"
 
 const Assignment = () => {
   const location = useLocation();
@@ -63,7 +64,7 @@ const Assignment = () => {
                 <div className="postcard__bar"></div>
                 <div className="postcard__preview-txt">
                   <p>Details:</p>
-                  <p>-{assignment.description}</p>
+                  <p className="mb-4">-{assignment.description}</p>
                   {assignment.details.map((detail, index) => (
                     <div key={index} className="detail__content">
                       <span>{index + 1}.</span>
@@ -79,6 +80,10 @@ const Assignment = () => {
                   <li className="tag__item">
                     <i className="fas fa-clock mr-2"></i>
                     {assignment.averageTime}
+                  </li>
+                  <li className="tag__item text-warning" onClick={() => navigate("/instructions")}>
+                    <i className="fa fa-info-circle mr-2"></i>
+                    Instructions
                   </li>
                   <li
                     className="tag__item play blue"
