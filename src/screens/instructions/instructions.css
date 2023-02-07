@@ -1,0 +1,9 @@
+.instructionsContent{
+    height: 100vh;
+    overflow: auto;
+    background-color: #110f16;
+}
+
+.instructionsContent .blue .postcard__bar{
+    background-color: white;
+}
