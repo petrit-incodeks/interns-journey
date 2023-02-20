@@ -97,3 +97,9 @@ body {
     background: #234f6d;
     background: linear-gradient(0deg, rgba(35, 79, 109, 0.3785889355742297) 0%, rgba(69, 95, 113, 1) 100%);
 }
+
+.card .assignment_finished {
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    background: #234f6d;
+    background: linear-gradient(0deg, rgba(35, 79, 109, 0.3785889355742297) 0%, rgb(18 223 82) 100%);
+}
