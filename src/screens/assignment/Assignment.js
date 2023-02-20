@@ -6,6 +6,15 @@ import Solution3 from "../../components/solutions/task03/Solution3";
 import Solution4 from "../../components/solutions/task04/Solution4";
 import Solution5 from "../../components/solutions/task05/Solution5";
 import Solution6 from "../../components/solutions/task06/Solution6";
+import Solution7 from "../../components/solutions/task07/Solution7";
+import Solution8 from "../../components/solutions/task08/Solution8";
+import Solution9 from "../../components/solutions/task09/Solution9";
+import Solution10 from "../../components/solutions/task10/Solution10";
+import Solution11 from "../../components/solutions/task11/Solution11";
+import Solution12 from "../../components/solutions/task12/Solution12";
+import Solution13 from "../../components/solutions/task13/Solution13";
+import Solution14 from "../../components/solutions/task14/Solution14";
+import Solution15 from "../../components/solutions/task15/Solution15";
 import "./assignment.css";
 import "../../components/solutions/style/solutions.css"
 
@@ -32,6 +41,15 @@ const Assignment = () => {
     Solution4,
     Solution5,
     Solution6,
+    Solution7,
+    Solution8,
+    Solution9,
+    Solution10,
+    Solution11,
+    Solution12,
+    Solution13,
+    Solution14,
+    Solution15
   ];
   const ComponentToRender =
     components[location.state !== null && location.state.assignment.id - 1];
