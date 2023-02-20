@@ -29,7 +29,7 @@ const AssignmentCard = ({ assignments }) => {
                 backgroundImage: `url(${randomPictureURL})`,
               }}
             >
-              <div className="card-img-overlay d-flex flex-column">
+              <div className={`${assignment.finished && 'assignment_finished'}  card-img-overlay d-flex flex-column`} >
                 <div className="card-body">
                   <small className="card-meta mb-2">{assignment.category}</small>
                   <h4 className="card-title mt-0 ">
