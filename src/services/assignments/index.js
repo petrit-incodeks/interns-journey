@@ -16,7 +16,7 @@ export const assignments = [
       ],
       difficulty: "Easy",
       averageTime: '2~4',
-      finished: true,
+      finished: false,
     },
     {
         id: 2,
@@ -37,7 +37,7 @@ export const assignments = [
         ],
         difficulty: "Easy",
         averageTime: '2~4',
-        finished: true,
+        finished: false,
       },
       {
         id: 3,
@@ -57,7 +57,7 @@ export const assignments = [
         ],
         difficulty: "Easy",
         averageTime: '2~4',
-        finished: true
+        finished: false
       },
       {
         id: 4,
@@ -79,7 +79,7 @@ export const assignments = [
         ],
         difficulty: "Easy",
         averageTime: '2~4',
-        finished: true
+        finished: false
       },
       {
         id: 5,
@@ -99,7 +99,7 @@ export const assignments = [
         ],
         difficulty: "Easy",
         averageTime: '2~4',
-        finished: true
+        finished: false
       },
       {
         id: 6,
@@ -118,7 +118,7 @@ export const assignments = [
         ],
         difficulty: "Medium",
         averageTime: '4~6',
-        finished: true
+        finished: false
       },
       {
         id: 7,
