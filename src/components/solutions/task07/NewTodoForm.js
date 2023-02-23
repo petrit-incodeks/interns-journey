@@ -14,7 +14,7 @@ export default function NewTodoForm({ create }) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="Todo-newTodoForm" onSubmit={handleSubmit}>
         <label htmlFor="task">New Todo</label>
         <input
           type="text"

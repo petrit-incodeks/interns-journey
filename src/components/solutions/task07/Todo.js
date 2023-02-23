@@ -6,14 +6,16 @@ export default function Todo({ removeTodo, id, task, completed, toggleTodo }) {
   const handleToggle = () => toggleTodo(id);
 
   return (
-    <div>
-      <button onClick={handleRemove}>X</button>
+    <div className="Todo-todo ">
       <li
-        className={completed ? "Todo-task-completed" : ""}
+        className={completed ? "Todo-task Todo-task-completed" : "Todo-task"}
         onClick={handleToggle}
       >
         {task}
       </li>
+      <button className="Todo-button" onClick={handleRemove}>
+        X
+      </button>
     </div>
   );
 }

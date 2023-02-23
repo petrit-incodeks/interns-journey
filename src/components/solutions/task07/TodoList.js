@@ -32,10 +32,10 @@ export default function TodoList() {
   });
 
   return (
-    <div>
+    <div className="Todo-todoList">
       <h2>Todo List</h2>
-      <NewTodoForm create={createTodo} />
       <ul>{renderTodos}</ul>
+      <NewTodoForm create={createTodo} />
     </div>
   );
 }

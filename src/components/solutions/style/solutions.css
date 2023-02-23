@@ -1,5 +1,55 @@
-.Todo-task-completed{
-    color: green;
+
+.Todo-todoList {
+    font-size:1.5rem;
+    
+}
+.Todo-todoList h2 {
+    letter-spacing: 2.5px;
+    border-bottom: 2px solid rgba(255,255,255, 0.5);
+}
+.Todo-todoList ul {
+    list-style: none;
+    margin-top:2rem ;
+}
+.Todo-todo {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -3rem 4px; 
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: rgba(255,255,255, 0.2);
+}
+.Todo-task.Todo-task-completed{
+    opacity: 0.6;
     text-decoration: line-through;
     
+}
+.Todo-button {
+    border: none;
+    cursor: pointer;
+    border-radius: 5px ;
+    background-color:rgba(255,255,255, 0.2) ;
+    padding: 1px 5px ;
+    color: white;
+}
+.Todo-newTodoForm {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Todo-newTodoForm label {
+    min-width: 100%;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.Todo-newTodoForm input {
+    padding: 0 1.5rem;
+    border: none;
+    flex-grow: 1;
+}
+.Todo-newTodoForm button {
+    border: 1px solid rgba(255,255,255,0.2);
+    background:#023047;
+    color: #fff;
+    cursor: pointer;
 }
