@@ -1,0 +1,18 @@
+.CounterApp {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.CounterApp h1 {
+    display: flex;
+    min-width: 100%;
+    justify-content: center; 
+    align-items: center; 
+}
+.CounterApp button{
+   margin:10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    
+}
