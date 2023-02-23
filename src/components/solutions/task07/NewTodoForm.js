@@ -7,7 +7,7 @@ export default function NewTodoForm({ create }) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    create({ task, id: uuidv4() });
+    create({ task, id: uuidv4(), completed: false });
 
     setTask("");
   };
