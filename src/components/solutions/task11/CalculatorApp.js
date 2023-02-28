@@ -6,7 +6,7 @@ function CalculatorApp() {
   const [total, setTotal] = useState(0);
 
   const add = () => {
-    setTotal(value1 + value2);
+    setTotal(parseInt(value1) + parseInt(value2));
     setValue1("");
     setValue2("");
   };
@@ -33,29 +33,44 @@ function CalculatorApp() {
     setValue2("");
   };
 
+  //   const handleChangeFirst = (e) => {
+  //     const value = e.target.value.replace(/\D/g, "");
+  //     setValue1(value);
+  //   };
+  //   const handleChangeSecond = (e) => {
+  //     const value = e.target.value.replace(/\D/g, "");
+  //     setValue2(value);
+  //   };
+  const handleChange = (e, setValue) => {
+    const value = e.target.value.replace(/\D/g, "");
+    setValue(value);
+  };
+
   return (
     <div>
       <h1>Calculator App</h1>
+      <div>
+        <input
+          type="text"
+          placeholder="first number"
+          value={value1}
+          onChange={(e) => handleChange(e, setValue1)}
+        />
+        <input
+          type="text"
+          placeholder="second number"
+          value={value2}
+          onChange={(e) => handleChange(e, setValue2)}
+        />
+      </div>
+      <div>
+        <button onClick={add}>Add</button>
+        <button onClick={subtract}>Subtract</button>
+        <button onClick={multiply}>Multiply</button>
+        <button onClick={divide}>Divide</button>
+      </div>
 
-      <input
-        type="text"
-        placeholder="first number"
-        value={value1}
-        onChange={(e) => setValue1(+e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="second number"
-        value={value2}
-        onChange={(e) => setValue2(+e.target.value)}
-      />
-
-      <button onClick={add}>Add</button>
-      <button onClick={subtract}>Subtract</button>
-      <button onClick={multiply}>Multiply</button>
-      <button onClick={divide}>Divide</button>
-
-      <p>Total is :{total}</p>
+      <h3>Total is : {total}</h3>
     </div>
   );
 }
