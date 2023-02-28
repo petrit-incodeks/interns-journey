@@ -12,20 +12,22 @@ function CalculatorApp() {
   };
 
   const subtract = () => {
-    setTotal(value1 - value2);
+    setTotal(parseInt(value1) - parseInt(value2));
     setValue1("");
     setValue2("");
   };
 
   const multiply = () => {
-    setTotal(value1 * value2);
+    setTotal(parseInt(value1) * parseInt(value2));
     setValue1("");
     setValue2("");
   };
 
   const divide = () => {
-    if (value2 !== 0) {
-      setTotal(value1 / value2);
+    let a = parseInt(value1);
+    let b = parseInt(value2);
+    if (b !== 0) {
+      setTotal(a / b);
     } else {
       alert("Cannnot divide by 0, put another number in");
     }
