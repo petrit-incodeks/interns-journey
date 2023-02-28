@@ -16,3 +16,28 @@
     padding: 10px 20px;
     border-radius: 10px;
 } 
+
+.WeatherApp {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+}
+.WeatherApp-form{
+  margin:1rem 0;
+}
+.WeatherApp-button {
+    outline: none;
+    border: none;
+    color:white;
+    background-color: #1d3557;
+    padding: 4px 5px;
+}
+.WeatherApp-info{
+    width: 100%;
+}
+
+.WeatherApp-info-card {
+    width: 100%;
+    margin-left: 50px;
+}
