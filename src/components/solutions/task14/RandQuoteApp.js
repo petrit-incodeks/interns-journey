@@ -7,18 +7,21 @@ function RandQuoteApp() {
   const [author, setAuthor] = useState("");
 
   function getQuote() {
-    return fetch(url)
-      .then((response) => response.json())
-      .then((response) => {
-        let rand = Math.floor(Math.random() * response.quotes.length);
-        let randomQuote = response.quotes[rand];
-        console.log(randomQuote);
-        setQuote(randomQuote.quote);
-        setAuthor(randomQuote.author);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    return new Promise((resolve, reject) => {
+      fetch(url)
+        .then((response) => response.json())
+        .then((response) => {
+          let rand = Math.floor(Math.random() * response.quotes.length);
+          let randomQuote = response.quotes[rand];
+          setQuote(randomQuote.quote);
+          setAuthor(randomQuote.author);
+          resolve();
+        })
+        .catch((error) => {
+          console.log(error);
+          reject(error);
+        });
+    });
   }
 
   return (
