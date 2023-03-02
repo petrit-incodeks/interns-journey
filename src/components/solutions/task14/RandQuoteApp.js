@@ -25,11 +25,15 @@ function RandQuoteApp() {
   }
 
   return (
-    <div>
-      <h2>Click To get a random Quote : </h2>
-      <button onClick={getQuote}>New Quote</button>
-      <h3>
-        {quote} <span>{author}</span>
+    <div className="RandomQuote">
+      <div className="RandomQuote-header">
+        <h2>Click To get a random Quote </h2>
+        <button className="RandomQuote-header-button" onClick={getQuote}>
+          New Quote
+        </button>
+      </div>
+      <h3 className="RandomQuote-h3">
+        {quote} <sub>{author}</sub>
       </h3>
     </div>
   );

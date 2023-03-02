@@ -41,3 +41,32 @@
     width: 100%;
     margin-left: 50px;
 }
+
+.RandomQuote{
+    display: inline-block;
+}
+.RandomQuote .RandomQuote-header {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    
+}
+.RandomQuote .RandomQuote-header .RandomQuote-header-button{
+    margin-left: 20px;
+    background-color: #1d3557;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+.RandomQuote .RandomQuote-header .RandomQuote-header-button:hover{
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
+}
+.RandomQuote .RandomQuote-h3 {
+    font-size: 2rem;
+}
+.RandomQuote .RandomQuote-h3 sub {
+     font-size: 1rem;
+}
