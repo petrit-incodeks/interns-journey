@@ -18,11 +18,12 @@ function StopWatch() {
 
   return (
     <div>
-      <h1>StopWatch</h1>
+      <h1>StopWatch App</h1>
+
       <h2>
-        Time: <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
-        <span> {("0" + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
-        <span> {("0" + ((time / 10) % 100)).slice(-2)}</span>
+        <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
+        <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
+        <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
       </h2>
       <div>
         <button onClick={() => setIsStarted(true)}>Start</button>
