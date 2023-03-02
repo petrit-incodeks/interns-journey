@@ -5,19 +5,20 @@ const url =
 function RandQuoteApp() {
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
-  async function getQuote() {
-    try {
-      let response = await fetch(url);
-      response = await response.json();
 
-      let rand = Math.floor(Math.random() * response.quotes.length);
-      let randomQuote = response.quotes[rand];
-      console.log(randomQuote);
-      setQuote(randomQuote.quote);
-      setAuthor(randomQuote.author);
-    } catch (error) {
-      console.log(error);
-    }
+  function getQuote() {
+    return fetch(url)
+      .then((response) => response.json())
+      .then((response) => {
+        let rand = Math.floor(Math.random() * response.quotes.length);
+        let randomQuote = response.quotes[rand];
+        console.log(randomQuote);
+        setQuote(randomQuote.quote);
+        setAuthor(randomQuote.author);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   return (
