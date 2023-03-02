@@ -33,7 +33,7 @@ function RandQuoteApp() {
         </button>
       </div>
       <h3 className="RandomQuote-h3">
-        {quote} <sub>{author}</sub>
+        {quote} <sub> ~{author}</sub>
       </h3>
     </div>
   );
