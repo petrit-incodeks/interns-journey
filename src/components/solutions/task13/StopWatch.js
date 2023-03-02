@@ -8,8 +8,8 @@ function StopWatch() {
     let interval;
     if (isStarted) {
       interval = setInterval(() => {
-        setTime((prevTime) => prevTime + 1);
-      }, 1);
+        setTime((prevTime) => prevTime + 10);
+      }, 10);
     } else if (!isStarted) {
       clearInterval(interval);
     }
@@ -20,9 +20,9 @@ function StopWatch() {
     <div>
       <h1>StopWatch</h1>
       <h2>
-        Time: <span>00 : </span>
-        <span> 00 : </span>
-        <span> {time}</span>
+        Time: <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
+        <span> {("0" + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
+        <span> {("0" + ((time / 10) % 100)).slice(-2)}</span>
       </h2>
       <div>
         <button onClick={() => setIsStarted(true)}>Start</button>
