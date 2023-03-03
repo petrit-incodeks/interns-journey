@@ -14,21 +14,27 @@ function QuizApp() {
     wrongAnswers: 0,
   });
 
-  //   function handleNext(){
+  function handleNext() {
+    // alert("go to the next question!");
 
-  //   }
+    setActiveQuestion((prevQuestion) => prevQuestion + 1);
+    //edge cases --
+    // i need to check  if i'm in the last question
+    //if i am, replace the button next with finish quiz
+  }
 
   const { questions } = quiz;
   return (
     <div>
       <h1>Quiz App</h1>
       <h3>Question: {questions[activeQuestion].question} </h3>
+      {/* change the buttons to be list items */}
       {questions[activeQuestion].choices.map((choice, i) => (
         <button key={i}>{choice}</button>
       ))}
 
       <div>
-        <button>Next</button>
+        <button onClick={handleNext}>Next</button>
       </div>
     </div>
   );

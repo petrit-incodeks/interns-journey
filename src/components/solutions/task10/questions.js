@@ -11,5 +11,11 @@ export const quiz = {
       type: "multiple choice Question",
       correctAnswer: "milky way",
     },
+    {
+      question: "The closest star from earth is?",
+      choices: ["Sirius", "Sun", "North Star", "22033-sd"],
+      type: "multiple choice Question",
+      correctAnswer: "Sun",
+    },
   ],
 };
