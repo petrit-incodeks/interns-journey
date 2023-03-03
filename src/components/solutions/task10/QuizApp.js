@@ -28,7 +28,7 @@ function QuizApp() {
       ))}
 
       <div>
-        <button onClick={handleNext}>Next</button>
+        <button>Next</button>
       </div>
     </div>
   );
