@@ -28,8 +28,6 @@ function QuizApp() {
   }
 
   function onSelectedAnswer(answer) {
-    // setSelectedAnswerIndex(id);
-    console.log(answer);
     if (answer === questions[activeQuestion].correctAnswer) {
       setSelectedAnswer(true);
       console.log("correct");
