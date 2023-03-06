@@ -27,9 +27,10 @@ function QuizApp() {
     //if i am, replace the button next with finish quiz
   }
 
-  function onSelectedAnswer(answer, id) {
-    setSelectedAnswerIndex(id);
-    if (answer === correctAnswer) {
+  function onSelectedAnswer(answer) {
+    // setSelectedAnswerIndex(id);
+    console.log(answer);
+    if (answer === questions[activeQuestion].correctAnswer) {
       setSelectedAnswer(true);
       console.log("correct");
     } else {
@@ -43,11 +44,13 @@ function QuizApp() {
       <h1>Quiz App</h1>
       <h3>Question: {questions[activeQuestion].question} </h3>
       {/* change the buttons to be list items later*/}
-      {questions[activeQuestion].choices.map((choice, i) => (
-        <button onClick={onSelectedAnswer} key={i}>
-          {choice}
-        </button>
-      ))}
+      <ul>
+        {questions[activeQuestion].choices.map((choice, i) => (
+          <li onClick={() => onSelectedAnswer(choice)} key={i}>
+            {choice}
+          </li>
+        ))}
+      </ul>
 
       <div>
         <button onClick={handleNext}>Next</button>
