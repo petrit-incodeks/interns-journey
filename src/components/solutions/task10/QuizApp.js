@@ -2,10 +2,6 @@ import React, { useState } from "react";
 import { quiz } from "./questions";
 
 function QuizApp() {
-  // keep track of the  active question
-  // keep track of the selected answer,
-  // and keep track of the result in which we should track the num of correct answers,wrong answers,and the score of the player
-
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState("");
@@ -55,17 +51,21 @@ function QuizApp() {
     <div className="Quiz">
       <h1>Quiz App</h1>
       {!showResults ? (
-        <div>
+        <div className="Quiz-active-questions">
           <h3>Question: {question} </h3>
           <ul>
             {choices.map((choice, i) => (
-              <li onClick={() => onSelectedAnswer(choice, i)} key={choice}>
+              <li
+                onClick={() => onSelectedAnswer(choice, i)}
+                key={choice}
+                className={selectedAnswerIndex === i ? "selected-answer" : null}
+              >
                 {choice}
               </li>
             ))}
           </ul>
 
-          <div>
+          <div className="Quiz-button-container">
             <button
               onClick={handleNext}
               disabled={selectedAnswerIndex === null}
@@ -75,12 +75,20 @@ function QuizApp() {
           </div>
         </div>
       ) : (
-        <div>
+        <div className="Quiz-results">
           <h3>Results</h3>
-          <h4>Total Questions : {questions.length}</h4>
-          <h4>Total Score:{result.score}</h4>
-          <h4>Correct Answers: {result.correctAnswers}</h4>
-          <h4>Wrong Answers: {result.wrongAnswers}</h4>
+          <p>
+            Total Questions : <span>{questions.length}</span>
+          </p>
+          <p>
+            Total Score: <span>{result.score}</span>
+          </p>
+          <p>
+            Correct Answers: <span>{result.correctAnswers}</span>
+          </p>
+          <p>
+            Wrong Answers: <span>{result.correctAnswers}</span>
+          </p>
         </div>
       )}
     </div>
