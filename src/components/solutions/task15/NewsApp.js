@@ -14,24 +14,19 @@ function NewsApp() {
   };
 
   fetch(
-    "https://bing-news-search1.p.rapidapi.com/news/search?q=weather&freshness=Day&textFormat=Raw&safeSearch=Off",
+    "https://bing-news-search1.p.rapidapi.com/news?safeSearch=Off&textFormat=Raw",
     options
   )
     .then((response) => response.json())
-    .then(
-      (response) => {
-        console.log(response);
-        let rand = Math.floor(Math.random() * response.value.length);
-        let randArticle = response.value[rand].image.thumbnail.contentUrl;
-        let randArticleTitle = response.value[rand].name;
-        let randArticleData = response.value[rand].description;
-        setState(randArticle);
-        setTitle(randArticleTitle);
-        setDesc(randArticleData);
-      }
-      //   console.log(response.value[0].image.thumbnail.contentUrl)
-    )
+    .then((response) => console.log(response))
     .catch((err) => console.error(err));
+  // let rand = Math.floor(Math.random() * response.value.length);
+  //       // let randArticle = response.value[rand].image.thumbnail.contentUrl;
+  //       // let randArticleTitle = response.value[rand].name;
+  //       // let randArticleData = response.value[rand].description;
+  //       // setState(randArticle);
+  //       // setTitle(randArticleTitle);
+  //       // setDesc(randArticleData);
 
   return (
     <div>
