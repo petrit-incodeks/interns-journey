@@ -87,7 +87,7 @@ function QuizApp() {
             Correct Answers: <span>{result.correctAnswers}</span>
           </p>
           <p>
-            Wrong Answers: <span>{result.correctAnswers}</span>
+            Wrong Answers: <span>{result.wrongAnswers}</span>
           </p>
         </div>
       )}
