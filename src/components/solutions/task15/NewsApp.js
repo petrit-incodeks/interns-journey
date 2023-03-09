@@ -26,36 +26,36 @@ function NewsApp() {
   for (let i = 0; i < data.length; i++) {
     arr.push(data[i]);
   }
-  // console.log(arr);
-  // // console.log(arr[0].image.thumbnail.contentUrl);
-  // arr.map((data) => {
-  //   console.log(data.image);
-  //   // console.log(data.image.thumbnail.contentUrl);
-  // });
-  // console.log(arr[0].image.thumbnail.contentUrl);
+
   return (
     <div className="NewsApp">
-      <div className="NewsApp_nav">
+      <div className=" NewsApp_nav">
         <h1>Latest News</h1>
         <button>incodeks</button>
       </div>
       <div className="container">
         <div className="row news_container">
           {arr.map((data, i) => (
-            <div key={i} className="col-lg-3 news_card">
-              <div className="col-lg-12 news_card_img">
+            <div key={i} className="col-lg-3 col-md-4 col-xs-12 news_card">
+              <div className="col news_card_img">
                 <img
                   src={`${data.image.thumbnail.contentUrl}`}
                   alt="articleImage"
                 />
               </div>
-              <div className="col-lg-12 news_card_body">
-                <h5>{data.name}</h5>
-                <p>{data.description}</p>
+              <div className="col news_card_body">
+                <h5>{data.name.substring(0, 40).concat("...")}</h5>
+                <p>{data.description.substring(0, 250).concat("...")}</p>
               </div>
-              <div className="col-lg-12 news_card_footer">
-                <small>{data.datePublished}</small>
-                <small>{data.datePublished}</small>
+              <div className="col news_card_footer">
+                <small>
+                  {new Date(data.datePublished).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "2-digit",
+                    day: "2-digit",
+                  })}
+                </small>
+                <small>{data._type}</small>
               </div>
             </div>
           ))}
