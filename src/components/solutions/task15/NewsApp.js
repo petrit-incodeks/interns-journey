@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 function NewsApp() {
   const [data, setData] = useState([]);
+  const [isClicked, setIsClicked] = useState(false);
   useEffect(() => {
     const options = {
       method: "GET",
@@ -31,7 +32,14 @@ function NewsApp() {
     <div className="NewsApp">
       <div className=" NewsApp_nav">
         <h1>Latest News</h1>
-        <button>incodeks</button>
+        <button
+          onClick={() => {
+            window.location.href = "https://incodeks.com/";
+            setIsClicked(!isClicked);
+          }}
+        >
+          {isClicked ? "Loading..." : "Incodeks"}
+        </button>
       </div>
       <div className="container">
         <div className="row news_container">
