@@ -41,33 +41,32 @@ function NewsApp() {
           {isClicked ? "Loading..." : "Incodeks >"}
         </button>
       </div>
-      <div className="container">
-        <div className="row news_container">
-          {arr.map((data, i) => (
-            <div key={i} className="col-lg-3 col-md-4 col-xs-12 news_card">
-              <div className="col news_card_img">
-                <img
-                  src={`${data.image.thumbnail.contentUrl}`}
-                  alt="articleImage"
-                />
-              </div>
-              <div className="col news_card_body">
-                <h5>{data.name.substring(0, 40).concat("...")}</h5>
-                <p>{data.description.substring(0, 250).concat("...")}</p>
-              </div>
-              <div className="col news_card_footer">
-                <small>
-                  {new Date(data.datePublished).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "2-digit",
-                    day: "2-digit",
-                  })}
-                </small>
-                <small>{data._type}</small>
-              </div>
+
+      <div className=" news_container">
+        {arr.map((data, i) => (
+          <div key={i} className="col-lg-3 col-md-4 col-xs-12 news_card">
+            <div className="col news_card_img">
+              <img
+                src={`${data.image.thumbnail.contentUrl}`}
+                alt="articleImage"
+              />
             </div>
-          ))}
-        </div>
+            <div className="col news_card_body">
+              <h5>{data.name.substring(0, 40).concat("...")}</h5>
+              <p>{data.description.substring(0, 250).concat("...")}</p>
+            </div>
+            <div className="col news_card_footer">
+              <small>
+                {new Date(data.datePublished).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "2-digit",
+                  day: "2-digit",
+                })}
+              </small>
+              <small>{data._type}</small>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
