@@ -38,7 +38,7 @@ function NewsApp() {
             setIsClicked(!isClicked);
           }}
         >
-          {isClicked ? "Loading..." : "Incodeks"}
+          {isClicked ? "Loading..." : "Incodeks >"}
         </button>
       </div>
       <div className="container">
