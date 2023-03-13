@@ -3,6 +3,23 @@ import React, { useEffect, useState } from "react";
 function NewsApp() {
   const [data, setData] = useState([]);
   const [isClicked, setIsClicked] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("politics");
+  const [url, setUrl] = useState(
+    `https://bing-news-search1.p.rapidapi.com/news/search?q=politics&freshness=Day&textFormat=Raw&safeSearch=Off`
+  );
+
+  //const url = `https://bing-news-search1.p.rapidapi.com/news/search?q=${searchTerm}&freshness=Day&textFormat=Raw&safeSearch=Off`;
+  function handleSearch(e) {
+    setSearchTerm(e.target.value);
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
+    setUrl(
+      `https://bing-news-search1.p.rapidapi.com/news/search?q=${searchTerm}&freshness=Day&textFormat=Raw&safeSearch=Off`
+    );
+    setSearchTerm("");
+  }
+
   useEffect(() => {
     const options = {
       method: "GET",
@@ -13,14 +30,11 @@ function NewsApp() {
       },
     };
 
-    fetch(
-      "https://bing-news-search1.p.rapidapi.com/news/search?q=%3CREQUIRED%3E&freshness=Day&textFormat=Raw&safeSearch=Off",
-      options
-    )
+    fetch(url, options)
       .then((response) => response.json())
       .then((response) => setData(response.value))
       .catch((err) => console.error(err));
-  }, []);
+  }, [url]);
 
   let arr = [];
 
@@ -32,6 +46,17 @@ function NewsApp() {
     <div className="NewsApp">
       <div className=" NewsApp_nav">
         <h1>Latest News</h1>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Search News.."
+            name="searchTerm"
+            value={searchTerm}
+            onChange={handleSearch}
+          />
+          <input type="submit" value="submit" />
+        </form>
+
         <button
           onClick={() => {
             window.location.href = "https://incodeks.com/";
