@@ -290,5 +290,6 @@ export const assignments = [
     ],
     difficulty: "Expert",
     averageTime: "8~12",
+    finished: true,
   },
 ];
