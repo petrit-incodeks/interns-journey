@@ -148,14 +148,25 @@
 }
 .NewsApp .NewsApp_nav {
     display: flex;
+    color: rgba(83, 138, 214, 1);
     justify-content: space-between;
+    align-items: center;
     padding-top: 20px ;
     letter-spacing: 1px;
-    margin-left: 70px;
+    margin-left: 50px;
     margin-bottom: 30px;
 }
-.NewsApp .NewsApp_nav button {   
+.NewsApp .NewsApp_nav .NewsApp_nav_form .searchInput {
     border: 2px solid #fca311;
+    outline-color: rgba(83, 138, 214, 1);
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin-right: 100px;
+   
+    
+}
+.NewsApp .NewsApp_nav button {   
+    border: 2px solid rgba(83, 138, 214, 1);
     margin-right: 30px;
     outline: none;
     background-color: white;
@@ -241,12 +252,12 @@
 @media only screen and (max-width: 600px){
     .NewsApp .NewsApp_nav{
         margin-left: 10px;
-        display: flex;
+        display: block;
         align-items: center;
     }
     .NewsApp .NewsApp_nav h1 {
         
-        font-size: 20px;
+        font-size: 40px;
     }
     .NewsApp .NewsApp_nav button {
         padding: 5px  10px;
@@ -254,7 +265,7 @@
     }
 
     .NewsApp .news_container {
-        margin-left:0;
+        margin:0;
         padding: 0; 
         display: flex;
         flex-wrap: wrap;
@@ -262,14 +273,14 @@
         
     }
     .NewsApp .news_card {
-        height: 480px;
-        width: 100%;
+        height: auto;
+        width: 70%;
         font-size: 10px;
         margin-bottom: 20px;
-        
+        padding: 0;
     }
     .NewsApp .news_card .news_card_body{
-        height: 240px;
+        height: auto;
     }
     .NewsApp .news_card .news_card_footer {
         display: flex;
@@ -277,7 +288,7 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        height: 10px;
+        height: 20px;
         padding-inline:10px ;
         background-color: beige;
     }

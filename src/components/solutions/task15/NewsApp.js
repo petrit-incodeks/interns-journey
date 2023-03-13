@@ -3,12 +3,11 @@ import React, { useEffect, useState } from "react";
 function NewsApp() {
   const [data, setData] = useState([]);
   const [isClicked, setIsClicked] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("politics");
+  const [searchTerm, setSearchTerm] = useState("");
   const [url, setUrl] = useState(
     `https://bing-news-search1.p.rapidapi.com/news/search?q=politics&freshness=Day&textFormat=Raw&safeSearch=Off`
   );
 
-  //const url = `https://bing-news-search1.p.rapidapi.com/news/search?q=${searchTerm}&freshness=Day&textFormat=Raw&safeSearch=Off`;
   function handleSearch(e) {
     setSearchTerm(e.target.value);
   }
@@ -46,15 +45,15 @@ function NewsApp() {
     <div className="NewsApp">
       <div className=" NewsApp_nav">
         <h1>Latest News</h1>
-        <form onSubmit={handleSubmit}>
+        <form className="NewsApp_nav_form" onSubmit={handleSubmit}>
           <input
+            className="searchInput"
             type="text"
             placeholder="Search News.."
             name="searchTerm"
             value={searchTerm}
             onChange={handleSearch}
           />
-          <input type="submit" value="submit" />
         </form>
 
         <button
