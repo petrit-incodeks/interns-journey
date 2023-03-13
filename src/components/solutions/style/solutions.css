@@ -157,8 +157,8 @@
     margin-bottom: 30px;
 }
 .NewsApp .NewsApp_nav .NewsApp_nav_form .searchInput {
-    border: 2px solid #fca311;
-    outline-color: rgba(83, 138, 214, 1);
+    border: 2px solid rgba(83, 138, 214, 1) ;
+    outline-color: rgba(83, 138, 214, 0.3);
     padding: 5px 20px;
     border-radius: 10px;
     margin-right: 100px;
