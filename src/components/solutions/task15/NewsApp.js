@@ -44,18 +44,21 @@ function NewsApp() {
 
       <div className=" news_container">
         {arr.map((data, i) => (
-          <div key={i} className="col-lg-3 col-md-4 col-xs-12 news_card">
-            <div className="col news_card_img">
+          <div key={i} className=" news_card">
+            <div className=" news_card_img">
               <img
-                src={`${data.image.thumbnail.contentUrl}`}
+                src={
+                  data?.image?.thumbnail?.contentUrl ||
+                  "https://www.brightlysoftware.com/sites/default/files/styles/small_hq/public/image/2022-08/TSR-News-Default.png?itok=Drok0IMH"
+                }
                 alt="articleImage"
               />
             </div>
-            <div className="col news_card_body">
+            <div className=" news_card_body">
               <h5>{data.name.substring(0, 40).concat("...")}</h5>
               <p>{data.description.substring(0, 250).concat("...")}</p>
             </div>
-            <div className="col news_card_footer">
+            <div className=" news_card_footer">
               <small>
                 {new Date(data.datePublished).toLocaleDateString("en-US", {
                   year: "numeric",
